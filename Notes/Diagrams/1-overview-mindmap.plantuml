@@ -1,40 +1,119 @@
 @startmindmap
-* Instrumenting and monitoring
-** Application Insights
-*** Application Performance Monitoring (APM)
-*** Proactive understanding of application performance
-*** Reactive review of application execution data
-*** Collection of metrics, telemetry data, and trace logging data
-** Live Metrics
-*** Real-time observation of deployed application activity
-** Availability
-*** Synthetic Transaction Monitoring for testing availability and responsiveness
-** GitHub or Azure DevOps integration
-*** Creation of work items in context of Application Insights data
-** Usage
-*** Understanding popular features and user interactions
-** Smart Detection
-*** Automatic failure and anomaly detection through telemetry analysis
-** Application Map
-*** Top-down view of application architecture and component health
-** Distributed Tracing
-*** Search and visualization of end-to-end execution or transaction flow
-** Metrics and telemetry data
-*** Request rates, response times, and failure rates
-*** Dependency rates, response times, and failure rates
-*** Exceptions analysis
-*** Page views and load performance
-*** AJAX calls monitoring
-*** User and session counts
-*** Performance counters from server machines
-*** Host diagnostics from Docker or Azure
-*** Diagnostic trace logs from the app
-*** Custom events and metrics
-** Application Insights in Microsoft Azure
-*** Telemetry analysis and presentation
-*** Free sign-up and basic pricing plan
-** Monitoring and analyzing app performance
-*** Instrumentation at run time or development time
-*** Web page and mobile app usage analysis
-*** Availability tests
+Appication Program
+
+@startmindmap "Application Insights"
+
+
+' Available themes: https://plantuml.com/theme
+!theme sketchy
+skinparam backgroundColor #969998
+
+<style>
+    mindMapDiagram {
+        .root {
+            BackgroundColor darkblue
+            LineColor black
+            FontColor white
+        }
+
+        .blue {
+            FontColor darkblue
+        }
+
+        node {
+            FontColor white
+            LineColor black
+            BackgroundColor black
+            Shadowing 2.0
+            RoundCorner 25
+        }
+        :depth(0) {
+            FontColor black
+            LineColor white
+            BackgroundColor white
+            Shadowing 0.0
+        }
+        :depth(1) {
+            FontColor black
+            BackgroundColor darkgrey
+            Shadowing 2.0
+        }
+
+        arrow {
+            LineStyle 4
+            LineThickness 0.5
+            LineColor green
+        }
+
+        boxless {
+            FontColor black
+            Margin 10
+            Padding 10
+            MaximumWidth 400
+        }
+    }
+</style>
+
+title Application Insights
+caption Application Insights
+' footer Application Insights
+
+legend right
+Application Insights is an Application Peformance Monitoring (APM) tool.
+Monitor applications from development, through testing and into production.
+endlegend
+
++ Application Insights
+++_ is an
++++ APM Tool
+++++_ Application performance monitoring
+++++ Proactively
++++++_ understand how your application is performing.
+++++ Reactively
++++++_ Review execution data to determine the cause of an incident.
+++_ collects
++++_ Metrics
++++_ Telemetry data
++++_ Trace logging data
+++++ Log Trace
++++++_ You provide storage for the logs
++++++_ Logging framework rarely needs to be changed
+
+
+
+
++ Features
+
+++ Live Metrics
++++_ Observe
+++++_ Real-time activity
+++++_ ... with no impact on host environment
+
+-- Availability
+---_ Probe your application's external endpoints
+---_ Test responsiveness
+---_ also known as
+----_ **Synthetic Transaction Monitoring**
+
+-- GitHub or\nAzure DevOps
+--- Integration
+----_ Create work items
+
+++ Usage
++++_ understand your
+++++ Users
++++++_ popular features
++++++_ how they use and interact with your application
+
+++ Smart Detection
++++_ **Automatic** failure and anomaly detection through telemetry analysis
+
+++ Application Map
++++_ top-down view of
+++++_ Application architecture
+++++_ Component health
+
+-- Distributed Tracing
+---_ Search and visualize end-to-end execution or transaction flow
+
 @endmindmap
